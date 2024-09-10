@@ -16,7 +16,7 @@ describe('Soundex Algorithm', () => {
   it('should handle normal words', () => {
     expect(generateSoundex('Art')).to.equal('A630');
     expect(generateSoundex('Robert')).to.equal('R163');
-    expect(generateSoundex('Mary')).to.equal('M600');
+    expect(generateSoundex('Hello')).to.equal('H400');
   });
 
   it('should handle mixed case names', () => {
