@@ -29,21 +29,29 @@ function cleanName(name) {
   return name.trim().replace(/[^A-Za-z]/g, '');
 }
 
-function processPart(part) {
-  const cleanedPart = cleanName(part);
-  if (!cleanedPart) return '0000';
+function processCharacter(char, prevCode, soundex) {
+  const code = getSoundexCode(char);
+  const validCode = addCodeIfValid(code, prevCode);
+  if (validCode) soundex.push(validCode);
+  return code;
+}
 
+function buildSoundex(cleanedPart) {
   const soundex = [getFirstLetter(cleanedPart)];
   let prevCode = getSoundexCode(soundex[0]);
 
   for (let i = 1; i < cleanedPart.length && soundex.length < 4; i++) {
-    const code = getSoundexCode(cleanedPart[i]);
-    const validCode = addCodeIfValid(code, prevCode);
-    if (validCode) soundex.push(validCode);
-    prevCode = code;
+    prevCode = processCharacter(cleanedPart[i], prevCode, soundex);
   }
 
   return padSoundex(soundex);
+}
+
+function processPart(part) {
+  const cleanedPart = cleanName(part);
+  if (!cleanedPart) return '0000';
+
+  return buildSoundex(cleanedPart);
 }
 
 function generateSoundex(name) {
