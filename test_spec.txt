@@ -1,9 +1,9 @@
 Test Specification Document for Soundex Algorithm.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-This document outlines the test cases designed to validate the Soundex algorithm's functionality. The Soundex algorithm is used to encode names into a four-character code based on their pronunciation, making it useful for      |
-matching names despite minor differences in spelling. 																																											   |
-The tests cover a range of input scenarios, including valid and invalid names, edge cases, and special cases, to ensure the algorithm behaves as expected.																		   |
-The purpose of this document is to provide a comprehensive testing strategy, ensuring that all aspects of the Soundex algorithm have been thoroughly verified.																	   |
+This document outlines the test cases designed to validate the Soundex algorithm's functionality. The Soundex algorithm is used to encode names into a four-character code based on their pronunciation, making it useful for|
+matching names despite minor differences in spelling. 															|
+The tests cover a range of input scenarios, including valid and invalid names, edge cases, and special cases, to ensure the algorithm behaves as expected.		|
+The purpose of this document is to provide a comprehensive testing strategy, ensuring that all aspects of the Soundex algorithm have been thoroughly verified.		|
 																																																								   |
 ---------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------------|-----------------|
 | Test Case ID | Purpose                                         | Description                                                                                                      | Input                      | Expected output |
@@ -21,7 +21,7 @@ The purpose of this document is to provide a comprehensive testing strategy, ens
 |              |                                                 | Soundex codes of the remaining valid consonants, and be padded with zeros if necessary to ensure the code        | "Aeiou"                    | "A000"          |
 |              |                                                 | has 4 characters.                                                                                                | "Abeioucd"                 | "A123"          |
 |--------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------------|-----------------|
-| TC004        | Function should handle Duplicate Consonants     | Duplicate consonants should be treated as a single occurrence in the Soundex code.								| "Hello"                    | "H400"          |
+| TC004        | Function should handle Duplicate Consonants     | Duplicate consonants should be treated as a single occurrence in the Soundex code.			     | "Hello"                    | "H400"          |
 |              |                                                 | Only the first instance is encoded, and subsequent identical consonants are ignored.                             | "Tennessee"                | "T520"          |
 |--------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------------|-----------------|
 | TC005        | Function should handle words with mixed letter  | The function should handle words with mixed upper and lower cases by treating them the same, producing the       | "McDonald"                 | "M235"          |
