@@ -1,9 +1,9 @@
 Test Specification Document for Soundex Algorithm.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-This document outlines the test cases designed to validate the Soundex algorithm's functionality. The Soundex algorithm is used to encode names into a four-character code based on their pronunciation, making it useful for|
-matching names despite minor differences in spelling. 															|
-The tests cover a range of input scenarios, including valid and invalid names, edge cases, and special cases, to ensure the algorithm behaves as expected.		|
-The purpose of this document is to provide a comprehensive testing strategy, ensuring that all aspects of the Soundex algorithm have been thoroughly verified.		|
+This document outlines the test cases designed to validate the Soundex algorithm's functionality. The Soundex algorithm is used to encode names into a four-character code based on their pronunciation, making it useful for	|
+matching names despite minor differences in spelling. 																		|
+The tests cover a range of input scenarios, including valid and invalid names, edge cases, and special cases, to ensure the algorithm behaves as expected.					|
+The purpose of this document is to provide a comprehensive testing strategy, ensuring that all aspects of the Soundex algorithm have been thoroughly verified.					|
 																																																								   |
 ---------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------------|-----------------|
 | Test Case ID | Purpose                                         | Description                                                                                                      | Input                      | Expected output |
