@@ -5,7 +5,7 @@ matching names despite minor differences in spelling. The tests cover a range of
 The purpose of this document is to provide a comprehensive testing strategy, ensuring that all aspects of the Soundex algorithm have been thoroughly verified.
 
 |--------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------------|-----------------|
-| Test Case ID | Objective                                       | Description                                                                                                      | Input                      | Expected output |
+| Test Case ID | Test case name                                  | Description                                                                                                      | Input                      | Expected output |
 |--------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------------|-----------------|
 | TC001        | Function handles empty strings                  | When given an empty string, the output                                                                           | ""                         | "0000"          |
 |              |                                                 | must pad with zeros to ensure the length is                                                                      |                            |                 |
