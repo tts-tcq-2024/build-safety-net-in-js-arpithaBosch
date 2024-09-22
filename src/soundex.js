@@ -1,12 +1,18 @@
 // Returns the Soundex code for a given character based on predefined groups.
 function getSoundexCode(char) {
   char = char.toUpperCase();
-  if (/[BFPV]/.test(char)) return '1';
-  if (/[CGJKQSXZ]/.test(char)) return '2';
-  if (/[DT]/.test(char)) return '3';
-  if (char === 'L') return '4';
-  if (/[MN]/.test(char)) return '5';
-  if (char === 'R') return '6';
+  const soundexGroups = {
+    '1': /[BFPV]/,
+    '2': /[CGJKQSXZ]/,
+    '3': /[DT]/,
+    '4': /L/,
+    '5': /[MN]/,
+    '6': /R/,
+  };
+
+  for (const [code, regex] of Object.entries(soundexGroups)) {
+    if (regex.test(char)) return code;
+  }
   return '0';
 }
 
