@@ -68,9 +68,9 @@ describe('Soundex Algorithm Tests', () => {
     assert.strictEqual(generateSoundex('2Krishh45'), 'K620');
   });
 
-  // TLeading and trailing spaces should be ignored when processing the name.
+  // Leading and trailing spaces should be ignored when processing the name.
   // The Soundex code should be based solely on valid alphabetic characters.
-  it('Function should correctly handle names with leading and trailing spaces with/without special characters.', () => {
+  it('Function should correctly handle names with leading and trailing spaces', () => {
     assert.strictEqual(generateSoundex('  Rita  '), 'R300');
     assert.strictEqual(generateSoundex('   "Kripa"   '), 'K610');
   });
